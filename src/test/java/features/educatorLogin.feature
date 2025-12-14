@@ -21,7 +21,7 @@ Examples:
 
 
 #---------------------------------------------------------------------------------------------#
-@UI
+
 Scenario Outline: Educator click on SiginIn button without entering credentials 
 
 Given user will enter the url and land on homepage
@@ -35,7 +35,7 @@ Examples:
 | Both Email and Password are required |
 
 #----------------------------------------------------------------------------------------------#
-@UI
+
 Scenario Outline: Educator will enter only email id and click on Signin button 
 
 Given user will enter the url and land on homepage

@@ -1,6 +1,6 @@
 Feature: Student will Enter the credentials and login to the application.
 
-@Credentials
+
 Scenario Outline: Student will enter will login and enroll the course
 Given user will enter the url and land on homepage
 When user will click on SignIn
@@ -31,8 +31,8 @@ Then check the Enrolled Cousre number
 
 Examples:
 |  Email                 | Password        |
-|  student52@student.com | studentpassword |
-|  student51@student.com | studentpassword |
+|  student@student.com | studentpassword |
+|  student@student.com | studentpassword |
 
 
 

@@ -1,8 +1,11 @@
+
+#studentRegistration#
+
 Feature: Student will Enter the credentials and login to the application.
 #--------------------------------------------------------------------------------------------#
-#
 
 
+@Regression @Signup
 Scenario Outline: Student will click on SiginUp button.
 
 Given user will enter the url and land on homepage
@@ -17,7 +20,7 @@ Examples:
 
 #---------------------------------------------------------------------------------------------#
 
-
+@Regression @Signup
 Scenario Outline: Student will click on SiginUp button.
 
 Given user will enter the url and land on homepage
@@ -34,7 +37,7 @@ Examples:
 #----------------------------------------------------------------------------------------------#
 
 
-
+@Regression @Signup
 Scenario Outline: Student will click on SiginUp button.
 
 Given user will enter the url and land on homepage
@@ -51,7 +54,7 @@ Examples:
 #------------------------------------------------------------------------------------------------#
 
 
-
+@Regression @Signup @Validation
 Scenario Outline: User we enter wrong email format
 
 Given user will enter the url and land on homepage
@@ -78,7 +81,7 @@ Examples:
 
 #----------------------------------------------------------------------------------------------------------------------------------------#
 
-
+@Regression @Signup
 Scenario Outline: Check weather without clicking on 
 Given user will enter the url and land on homepage
 When user will click on startLearning
@@ -93,7 +96,7 @@ Examples:
 
 #----------------------------------------------------------------------------------------------------------------------------------------#
 
-@SiginUp 
+@SiginUp @UI 
 Scenario Outline: Check weather SiginUp button is enabled and displayed or not 
 
 Given user will enter the url and land on homepage

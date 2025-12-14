@@ -1,7 +1,7 @@
 Feature: Student will Enter the credentials and login to the application.
 #--------------------------------------------------------------------------------------------#
 
-@RegressionSuite
+
 Scenario Outline: Student will enter credentials   Login
 
 Given user will enter the url and land on homepage
@@ -22,7 +22,7 @@ Examples:
 
 #---------------------------------------------------------------------------------------------#
 
-@Regression
+
 Scenario Outline: Stundent click on SiginIn button without entering credentials 
 
 Given user will enter the url and land on homepage
@@ -37,7 +37,7 @@ Examples:
 
 #----------------------------------------------------------------------------------------------#
 
-@Regression
+
 Scenario Outline: Student will enter only email id and click on Signin button 
 
 Given user will enter the url and land on homepage
@@ -53,7 +53,7 @@ Examples:
 #----------------------------------------------------------------------------------------------#
 
 
-@UI
+
 Scenario: Verify that the Sign In button is clickable
 
 Given user will enter the url and land on homepage
@@ -63,7 +63,7 @@ Then the Sign In button should be clickable
 
 #------------------------------------------------------------------------------------------------#
 
-@UI
+
 Scenario: Verify that the Remember me is textbox is clickable or not
 
 Given user will enter the url and land on homepage
@@ -72,7 +72,7 @@ Then user will select on I am student
 Then the remember button should be clickable
 
 #------------------------------------------------------------------------------------------------#
-@SmokeTest
+
 Scenario: Verify the Forget Password is displayed or not
 
 Given user will enter the url and land on homepage
@@ -82,7 +82,7 @@ And user will check ForgetPassword button is Enabled and Displayed or not
 
 #--------------------------------------------------------------------------------------------------#
 
-@SmokeTest
+
 Scenario: Verify the SiginUp is displayed or not
 
 Given user will enter the url and land on homepage

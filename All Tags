@@ -1,6 +1,11 @@
-All Tags List
-
-@UI
+Core Execution Tags
+@Smoke
 @Regression
-@Brokenlinks
+@UI
 
+Functional Area Tags
+@Signup
+@Login
+
+Specialized Coverage Tags
+@Validation

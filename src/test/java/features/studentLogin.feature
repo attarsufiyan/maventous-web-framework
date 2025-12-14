@@ -1,7 +1,10 @@
+
+#studentLogin.feature#
+
 Feature: Student will Enter the credentials and login to the application.
 #--------------------------------------------------------------------------------------------#
 
-
+@Smoke @Login
 Scenario Outline: Student will enter credentials   Login
 
 Given user will enter the url and land on homepage
@@ -21,7 +24,7 @@ Examples:
 
 #---------------------------------------------------------------------------------------------#
 
-@Regression 
+@Regression @Login
 Scenario Outline: Stundent click on SiginIn button without entering credentials 
 
 Given user will enter the url and land on homepage
@@ -35,7 +38,7 @@ Examples:
 
 #----------------------------------------------------------------------------------------------#
 
-@Regression
+@Regression @Login
 Scenario Outline: Student will enter only email id and click on Signin button 
 
 Given user will enter the url and land on homepage
@@ -50,7 +53,7 @@ Examples:
 #----------------------------------------------------------------------------------------------#
 
 
-@UI 
+@UI @Login 
 Scenario: Verify that the Sign In button is clickable
 
 Given user will enter the url and land on homepage
@@ -59,7 +62,7 @@ Then the Sign In button should be clickable
 
 #------------------------------------------------------------------------------------------------#
 
-@UI 
+@UI @Login
 Scenario: Verify that the Remember me is textbox is clickable or not
 
 Given user will enter the url and land on homepage
@@ -68,7 +71,7 @@ Then the remember button should be clickable
 
 #------------------------------------------------------------------------------------------------#
 
-@SmokeTest 
+@Smoke @Login
 Scenario: Verify the Forget Password is displayed or not
 
 Given user will enter the url and land on homepage
@@ -77,7 +80,7 @@ And user will check ForgetPassword button is Enabled and Displayed or not
 
 #--------------------------------------------------------------------------------------------------#
 
-@SmokeTest
+@Smoke @Login
 Scenario: Verify the SiginUp is displayed or not
 
 Given user will enter the url and land on homepage
