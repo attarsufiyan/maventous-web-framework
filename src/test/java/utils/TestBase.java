@@ -7,6 +7,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -23,10 +24,13 @@ public class TestBase {
 		Properties prop = new Properties();
 		prop.load(fis);
 		String url = prop.getProperty("QAUrl");
+		
+		
 		String browser_prop = prop.getProperty("browser");
 		String browser_maven = System.getProperty("browser");
 
 		String browser = browser_maven != null ? browser_maven : browser_prop;
+		boolean isCI = System.getenv("JENKINS_HOME") != null;
 
 		if (driver == null) {
 
@@ -38,7 +42,17 @@ public class TestBase {
 
 			if (browser.equalsIgnoreCase("edge")) {
 				WebDriverManager.edgedriver().setup();
-				driver = new EdgeDriver();
+				
+				
+				EdgeOptions options = new EdgeOptions();
+
+                if (isCI) {
+                    options.addArguments("--headless=new");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--disable-dev-shm-usage");
+                }
+                driver = new EdgeDriver();
 			}
 			if (browser.equalsIgnoreCase("firefox")) {
 				WebDriverManager.firefoxdriver().setup();
