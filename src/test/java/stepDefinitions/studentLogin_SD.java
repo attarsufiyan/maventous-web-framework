@@ -59,7 +59,7 @@ public class studentLogin_SD {
 	public void the_Sign_In_button_should_be_clickable() {
 
 		WebElement signInButton = GenericUtils.waitForElementToBeClickable(variables.driver,
-				By.xpath("//*[text()='Sign In']"));
+				By.cssSelector(".css-1oxa3ls"));
 		Assert.assertTrue(signInButton.isDisplayed() && signInButton.isEnabled(), "Sign In button is not clickable");
 
 	}
